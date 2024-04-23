@@ -4,8 +4,8 @@ namespace Zadanie3_RESTAPI.Repositories;
 
 public interface IAnimalsRepository
 {
-    Task<List<Animal>> GetAllAnimalsAsync(string orderBy);
-    Task AddAnimalAsync(Animal animal);
-    Task UpdateAnimalAsync(Animal animal);
-    Task DeleteAnimalAsync(int idAnimal); 
+    IEnumerable<Animal> GetAnimals(string orderBy);
+    int AddAnimal(Animal animal);
+    int UpdateAnimal(Animal animal);
+    int DeleteAnimal(int idAnimal); 
 }
